@@ -26,6 +26,10 @@ To determine the score, we need to derive the values of "offset" and "factor" as
 WOE: Weight of Evidence. Measure the importance of different bins, which varies in the same direction as the default rate. $$WOE = ln(\frac{yPctGood}{yPctBad})$$
 IV: Information Value. Measure the importance of different variables. $$IV = \sum_{i=1}^{n}(yPctGood - yPctBad) * ln(\frac{yPctGood}{yPctBad})$$
 ### XgBoost(xgb)
+The principle of xgb is gradient boosting decision tree(GBDT), which can be used in both the classification and the regression problems. Three basic elements of boosting are: (1) A loss function to be optimized; (2) A weak learner to make predictions; (3) An additive model. The gradient boosting adjusts the previous residual error when it adds a new weak learner, thus obtaining a higher accuracy. It's called 'gradient' because it uses the gradient descend to minimize the loss function. However, the implementation of gradient boosting is slow since each time it needs to construct a tree and add it to the model sequence. In terms of this problem, xgb owns an advantage of fast speed. What's more, it generally has a better performance than GBDT for the following reasons.  
+(1)  
+
+
 ### LightGBM(lgbm)
 
 ### Relevant Materials
